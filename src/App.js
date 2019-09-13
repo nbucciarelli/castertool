@@ -12,15 +12,15 @@ console.log(championJson.data['Aatrox']);
 const options = Object.keys(championJson.data).map(name => { return {value: name, label: name} })
 class App extends Component {
   state = {
-    championsSelectedBlue: cookies.get('championsSelectedBlue'),
-    championsSelectedRed: cookies.get('championsSelectedRed')
+    championsSelectedBlue: null,//cookies.get('championsSelectedBlue'),
+    championsSelectedRed: null//cookies.get('championsSelectedRed')
   };
   handleChange = team => selectedOption => {
 
     this.setState({ [`championsSelected${team}`]: selectedOption });
     console.log(team)
     console.log(selectedOption)
-    cookies.set(`championsSelected${team}`, selectedOption, { path: '/' });
+    // cookies.set(`championsSelected${team}`, selectedOption, { path: '/' });
     console.log(`Option selected:`, selectedOption);
   };
   render() {
