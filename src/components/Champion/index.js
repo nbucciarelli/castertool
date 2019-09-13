@@ -12,6 +12,7 @@ class Champion extends Component {
     return (
       <li className={classNames}>
         <div className="row">
+          <img src={require(`${this.buildImage()}`)} alt={this.props.data.name} className="col-4"/>
           <ul className="col-7">
             <li>Passive: {this.props.data.passive.name}</li>
             <li>Q: {this.props.data.spells[0].name}</li>

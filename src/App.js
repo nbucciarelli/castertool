@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Champion from './components/Champion';
+import ChampionList from './components/Champion/List'
 import championJson from "./dragontail-9.18.1/9.18.1/data/en_US/championFull.json";
 import Select from 'react-select';
 import Cookies from 'universal-cookie';
@@ -36,8 +37,10 @@ class App extends Component {
             isMulti
             className="col-12"
           />
-          <ul className="list-group col-12">
-          </ul>
+          {(championsSelectedBlue ? 
+            (<ChampionList champions={championsSelectedBlue} championJson={championJson}></ChampionList>) 
+            : (<h1>No champions selected</h1>) 
+          )}            
         </div>
         <div className="col-6 red-team">
           <h1>Red Team</h1>
@@ -48,19 +51,14 @@ class App extends Component {
             isMulti
             className="col-12"
           />            
-          <ul className="list-group col-12">
-          </ul>
+          {(championsSelectedRed ? 
+            (<ChampionList champions={championsSelectedRed} championJson={championJson}></ChampionList>) 
+            : (<h1>No champions selected</h1>) 
+          )}
         </div>
       </div>
     )
   };
 }
-// {championsSelectedBlue.map(champSelected => {
-//   return <Champion team={"blue"} data={championJson.data[champSelected.value]} key={champSelected.value}></Champion>
-// })}  
-
-// {championsSelectedRed.map(champSelected => {
-//   return <Champion team={"red"} data={championJson.data[champSelected.value]} key={champSelected.value}></Champion>
-// })}  
 
 export default App;
