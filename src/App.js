@@ -9,7 +9,7 @@ const cookies = new Cookies();
 
 console.log(championJson.data['Aatrox']);
 const options = Object.keys(championJson.data).map(name => { return {value: name, label: name} })
-class App extends React.Component {
+class App extends Component {
   state = {
     championsSelectedBlue: cookies.get('championsSelectedBlue'),
     championsSelectedRed: cookies.get('championsSelectedRed')
