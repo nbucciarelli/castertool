@@ -15,6 +15,7 @@ class App extends Component {
     championsSelectedRed: cookies.get('championsSelectedRed')
   };
   handleChange = team => selectedOption => {
+
     this.setState({ [`championsSelected${team}`]: selectedOption });
     console.log(team)
     console.log(selectedOption)
@@ -36,9 +37,6 @@ class App extends Component {
             className="col-12"
           />
           <ul className="list-group col-12">
-            {championsSelectedBlue.map(champSelected => {
-              return <Champion team={"blue"} data={championJson.data[champSelected.value]} key={champSelected.value}></Champion>
-            })}  
           </ul>
         </div>
         <div className="col-6 red-team">
@@ -51,14 +49,18 @@ class App extends Component {
             className="col-12"
           />            
           <ul className="list-group col-12">
-            {championsSelectedRed.map(champSelected => {
-              return <Champion team={"red"} data={championJson.data[champSelected.value]} key={champSelected.value}></Champion>
-            })}  
           </ul>
         </div>
       </div>
     )
   };
 }
+// {championsSelectedBlue.map(champSelected => {
+//   return <Champion team={"blue"} data={championJson.data[champSelected.value]} key={champSelected.value}></Champion>
+// })}  
+
+// {championsSelectedRed.map(champSelected => {
+//   return <Champion team={"red"} data={championJson.data[champSelected.value]} key={champSelected.value}></Champion>
+// })}  
 
 export default App;
