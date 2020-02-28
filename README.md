@@ -10,6 +10,8 @@
 
 5. Once installed type "npm start". After a short time a browser tab will open and the app is good to go :) (npm start is how you start it from now on via the powershell window).
 
+----------
+
 https://www.communitydragon.org/
 https://riot-api-libraries.readthedocs.io/en/latest/libraries.html
 https://jedwatson.github.io/react-select/
