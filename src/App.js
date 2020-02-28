@@ -3,7 +3,7 @@ import './App.css';
 
 import Champion from './components/Champion';
 import ChampionList from './components/Champion/List'
-import championJson from "./dragontail-9.18.1/9.18.1/data/en_US/championFull.json";
+import championJson from "./dragontail/10.4.1/data/en_US/championFull.json";
 import Select from 'react-select';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
